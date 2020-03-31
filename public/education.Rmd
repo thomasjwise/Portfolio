@@ -1,0 +1,31 @@
+---
+title: "Education"
+output: 
+  html_document: 
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+---
+---
+
+## Education
+
+#### *Methodology and Statistics for the Behavioural, Biomedical and Social Sciences (MSc)*
+<font size = "3">
+  \| *University of Utrecht & University of Twente, Netherlands* - September 2019 to current.  
+<font size = "2">
+  \| Additional Notable Skills: R Coding and Statistical Communication.  
+  \| Areas of Interest: Statistical Communication in R & R-markdown, Statistical Learning and Accessible Data Visualisation.  
+  
+#### *Psychological Theory and Practice (MSci)*  
+<font size = "3">
+  \| *University of Reading, United Kingdom* - September 2015 to May 2019.  
+<font size = "2">
+  \| Awarded: First Division, Second Class Honours Degree (2:1).  
+  \| Certificates: Low Intensity Psychological Interventions, September 2018.  
+  \| Thesis: An Investigation into the Relationship between an Individual’s engagement in Inner speech and Individual differences in Dissociation. (Unpublished).  
+  \| Additional Notable Skills: SPSS, fMRI data analysis with FSLView & Shell.  
+  \| Areas of Interest: Cognitive, Clinical and Biological Psychology and Research Methods in Psychology.  
+
+---

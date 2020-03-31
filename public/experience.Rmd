@@ -1,0 +1,74 @@
+---
+title: "Experience"
+output: 
+  html_document: 
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+---
+---
+## Experience
+### Employment
+#### *Student Research Assistant*.  
+<font size = "4">
+  \ \ \| *Utrecht University*.    
+<font size = "3">
+  \ \ \| January 2020 to Present  
+  \| *Current Projects*:  
+  <font size = "2">
+  \ \ \ \ \| Teaching Material Development, for Minor course in Applied Data analysis and Visualitation (TBC)  
+  \ \ \ \ \| Teaching Material Development, for Summer School in Data Science: Data Analysis; March 2020 to Present  
+  \ \ \ \ \| Research Interview Transcription (English); March 2020 to Present  
+  <font size = "3">
+  \| *Previous Projects*:  
+  <font size = "2">
+  \ \ \ \ \| Work Group Teaching for course in Statistics for Psychology Students (Feb - March 2020)  
+  \ \ \ \ \| Teaching Material Translation (Dutch-English), for course in Statistics for Psychology Students (Jan 2020)  
+  
+#### *Theatre Sound Councillor*.  
+<font size = "4">
+  \ \| *French Woods Festival of the Performing Arts, USA*.  
+<font size = "3">
+  \ \| Summer Seasons, 2016-2019.  
+  \ \ \| *Positions Held*:  
+<font size = "2">
+  \ \ \ \ \| Head of Theatre Sound: 2019;   
+  \ \ \ \ \| Theatre Sound Councillor: 2016-2018    
+  
+#### *Student Ambassador*.
+<font size = "4">
+  \ \| *University of Reading, UK*.  
+<font size = "3">
+  \ \| September 2016 - May 2019.  
+  \ \ \| *Positions Held*: 
+<font size = "2">  
+  \ \ \ \ \| Student Ambassador: 2017-2019;   
+  \ \ \ \ \| Open Day Ambassador: 2016-2017    
+  
+#### *Disabled Students Social Mentor*.
+<font size = "4">
+  \ \| *University of Reading, UK*.   
+<font size = "3">
+  \ \| September 2017 - May 2019.  
+  
+#### *Study Smart Ambassador*.
+<font size = "4">
+  \ \| *University of Reading, UK*.
+<font size = "3">  
+  \ \| September 2017 - December 2018.    
+  \ \ \| *Positions Held*:
+<font size = "2">  
+  \ \ \ \ \| Study Smart Ambassador: 2017,   
+  \ \ \ \ \| Team Leader: 2018.    
+  
+#### *Trainee Psychological Wellbeing Practitioner*.  
+<font size = "4">
+  \ \| *Oxford Health NHS Foundation Trust, UK*.  
+<font size = "3">
+  \ \| September 2017 - May 2018.  
+  \ \| Trainee-ship for the Low Intensity Psychological Interventions Certificate, 
+  <font size = "2">  
+  \ \ \ \ \| Involving over 80 hours of direct psychological support for clients within the Oxford Health Service.   
+  
+  

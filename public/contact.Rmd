@@ -1,0 +1,15 @@
+---
+title: "Contact Me Directly:"
+output: 
+  html_document: 
+    theme: spacelab
+---
+
+
+Feel free to contact me through email on: 
+
+t.j.wise@uu.nl
+
+thomas.j.wise@outlook.com
+
+Or connect with me through Github, Twitter, or Linkedin (icons left). 

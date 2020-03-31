@@ -1,0 +1,79 @@
+theme = "soho"
+baseurl = "/"
+languageCode = "en"
+title = "Thomas J Wise"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+summarylength = 10
+enableEmoji = true
+
+[params]
+description = ""
+# gravatar = "soho@example.com"
+profilePicture = ""
+copyright = "Thomas Wise"
+license = "CC BY-SA 4.0"
+licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+
+## Set custom theme color.
+themeColor = "#000000"
+
+  [[params.socialIcons]]
+  icon = "fa-linkedin"
+  title = "Linkedin"
+  url = "https://www.linkedin.com/in/thomas-wise-970a0a109/"
+
+  [[params.socialIcons]]
+  icon = "fa-github"
+  title = "GitHub"
+  url = "https://github.com/thomasjwise"
+
+  [[params.socialIcons]]
+  icon = "fa-twitter"
+  title = "Twitter"
+  url = "https://twitter.com/TpsychWise"
+  
+[menu]
+
+  [[menu.main]]
+  name = "About"
+  identifier = "about"
+  weight = 1
+  url = "/about/"
+  
+  [[menu.main]]
+  name = "Education"
+  identifier = "education"
+  weight = 2
+  url = "/education/"
+  
+  [[menu.main]]
+  name = "Experience"
+  identifier = "experience"
+  weight = 3
+  url = "/experience/"
+  
+  [[menu.main]]
+  name = "Contact"
+  identifier = "contact"
+  weight = 4
+  url = "/contact/"
+  
+  [[menu.main]]
+  name = "Posts"
+  identifier = "posts"
+  weight = 5
+  url = "/posts/"
+
+[markup]
+
+  [markup.highlight]
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = "monokai"
+  tabWidth = 5

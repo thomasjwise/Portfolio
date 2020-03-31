@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thomas J Wise</title>
+    <link>/</link>
+    <description>Recent content on Thomas J Wise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content Coming Soon</title>
+      <link>/post/tbc/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/tbc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact Me Directly:</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description>Feel free to contact me through email on:
+t.j.wise@uu.nl</description>
+    </item>
+    
+    <item>
+      <title>Education</title>
+      <link>/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/education/</guid>
+      <description>Education Methodology and Statistics for the Behavioural, Biomedical and Social Sciences (MSc) | University of Utrecht &amp;amp; University of Twente, Netherlands - September 2019 to current.</description>
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>/experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/experience/</guid>
+      <description>Experience Employment Student Research Assistant. | Utrecht University.
+| January 2020 to Present</description>
+    </item>
+    
+    <item>
+      <title>Experience and Qualifications</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Education Methodology and Statistics for the Behavioural, Biomedical and Social Sciences (MSc) | University of Utrecht &amp;amp; University of Twente, Netherlands - September 2019 to current.</description>
+    </item>
+    
+  </channel>
+</rss>
