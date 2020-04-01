@@ -8,7 +8,22 @@
   </url>
   
   <url>
+    <loc>/tags/post/</loc>
+    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/posts_tbc/</loc>
+    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
+    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resources/res_tbc/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -18,17 +33,12 @@
   </url>
   
   <url>
-    <loc>/resources/r_tbc/</loc>
+    <loc>/tags/resources/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/resources/r_tbc/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/c_tbc/</loc>
+    <loc>/tags/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,18 +48,8 @@
   </url>
   
   <url>
-    <loc>/tutorials/t_tbc/</loc>
+    <loc>/tutorials/tut_tbc/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/c_tbc/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tutorials/t_tbc/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -70,10 +70,6 @@
   
   <url>
     <loc>/experience/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
   </url>
   
 </urlset>
