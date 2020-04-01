@@ -6,45 +6,63 @@
     <description>Recent content on Thomas J Wise</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Content Coming Soon</title>
-      <link>/homepage/tbc/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <title>Resources Coming Soon</title>
+      <link>/resources/r_tbc/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/homepage/tbc/</guid>
-      <description></description>
+      <guid>/resources/r_tbc/</guid>
+      <description>Resources, Cheatsheets and Materials Coming Soon</description>
     </item>
     
     <item>
-      <title>Content Coming Soon</title>
-      <link>/post/tbc/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <title>Resources coming soon</title>
+      <link>/resources/r_tbc/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/tbc/</guid>
-      <description></description>
+      <guid>/resources/r_tbc/</guid>
+      <description>Resources, Cheatsheets and Materials Coming Soon</description>
     </item>
     
     <item>
-      <title>Content Coming Soon</title>
-      <link>/resources/tbc/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <title>TBC</title>
+      <link>/post/c_tbc/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/resources/tbc/</guid>
-      <description></description>
+      <guid>/post/c_tbc/</guid>
+      <description>Content Coming Soon</description>
     </item>
     
     <item>
-      <title>Content Coming Soon</title>
-      <link>/tutorials/tbc/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <title>Tutorials Coming Soon</title>
+      <link>/tutorials/t_tbc/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tutorials/tbc/</guid>
-      <description></description>
+      <guid>/tutorials/t_tbc/</guid>
+      <description>Look hear for R, Rmarkdown and more tutorials</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/c_tbc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/c_tbc/</guid>
+      <description>Content Coming Soon</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/tutorials/t_tbc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorials/t_tbc/</guid>
+      <description>Look hear for R, Rmarkdown and more tutorials</description>
     </item>
     
     <item>

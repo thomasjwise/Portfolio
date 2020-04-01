@@ -6,18 +6,27 @@
     <description>Recent content in Resources on Thomas J Wise</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/resources/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Content Coming Soon</title>
-      <link>/resources/tbc/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <title>Resources Coming Soon</title>
+      <link>/resources/r_tbc/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/resources/tbc/</guid>
-      <description></description>
+      <guid>/resources/r_tbc/</guid>
+      <description>Resources, Cheatsheets and Materials Coming Soon</description>
+    </item>
+    
+    <item>
+      <title>Resources coming soon</title>
+      <link>/resources/r_tbc/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/resources/r_tbc/</guid>
+      <description>Resources, Cheatsheets and Materials Coming Soon</description>
     </item>
     
   </channel>
