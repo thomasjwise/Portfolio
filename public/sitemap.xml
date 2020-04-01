@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>/private_page_1.html.enc/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
   </url>
   
@@ -35,6 +40,14 @@
   
   <url>
     <loc>/experience/</loc>
+  </url>
+  
+  <url>
+    <loc>/private/</loc>
+  </url>
+  
+  <url>
+    <loc>/private_page_1/</loc>
   </url>
   
   <url>
