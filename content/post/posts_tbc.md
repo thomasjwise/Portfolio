@@ -10,5 +10,3 @@ tags = [
 
 Blog Post Content Coming Soon
 <!--more-->
-
-Potatoes are Tasty

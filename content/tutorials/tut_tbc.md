@@ -10,5 +10,3 @@ tags = [
 
 Tutorials Coming Soon
 <!--more-->
-
-Spinach is Tasty

@@ -10,5 +10,3 @@ tags = [
 
 Resources Coming Soon
 <!--more-->
-
-Carrots are Tasty
