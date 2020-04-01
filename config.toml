@@ -36,12 +36,6 @@ themeColor = "#000000"
 [menu]
 
   [[menu.main]]
-  name = "About"
-  identifier = "about"
-  weight = 1
-  url = "/about/"
-  
-  [[menu.main]]
   name = "Education"
   identifier = "education"
   weight = 2
@@ -64,6 +58,12 @@ themeColor = "#000000"
   identifier = "posts"
   weight = 5
   url = "/posts/"
+
+  [[menu.main]]
+  name = "Tutorials"
+  identifier = "tutorial"
+  weight = 5
+  url = "/tutorial/"
 
 [markup]
 
