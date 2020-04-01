@@ -2,7 +2,7 @@
 title: "Content Coming Soon"
 date: "2020-05-31"
 output: 
-  html_document: 
+  github_document: 
     toc: true
     toc_float:
       collapsed: false

@@ -8,9 +8,6 @@ output:
       smooth_scroll: false
 ---
 ---
-
-## Education
-
 #### *Methodology and Statistics for the Behavioural, Biomedical and Social Sciences (MSc)*
 <font size = "3">
   \| *University of Utrecht & University of Twente, Netherlands* - September 2019 to current.  
