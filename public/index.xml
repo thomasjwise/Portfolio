@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>About Me</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Content Coming Soon</description>
+    </item>
+    
+    <item>
       <title>Contact Me Directly:</title>
       <link>/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -47,15 +56,6 @@ t.j.wise@uu.nl</description>
       <guid>/experience/</guid>
       <description>Experience Employment Student Research Assistant. | Utrecht University.
 | January 2020 to Present</description>
-    </item>
-    
-    <item>
-      <title>Experience and Qualifications</title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Education Methodology and Statistics for the Behavioural, Biomedical and Social Sciences (MSc) | University of Utrecht &amp;amp; University of Twente, Netherlands - September 2019 to current.</description>
     </item>
     
   </channel>
