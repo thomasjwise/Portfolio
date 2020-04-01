@@ -57,13 +57,19 @@ themeColor = "#000000"
   name = "Posts"
   identifier = "posts"
   weight = 5
-  url = "/posts/"
+  url = "/post/"
 
   [[menu.main]]
   name = "Tutorials"
-  identifier = "tutorial"
+  identifier = "tutorials"
   weight = 5
-  url = "/tutorial/"
+  url = "/tutorials/"
+  
+  [[menu.main]]
+  name = "Resources"
+  identifier = "resources"
+  weight = 5
+  url = "/resources/"  
 
 [markup]
 

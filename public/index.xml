@@ -13,6 +13,15 @@
     
     <item>
       <title>Content Coming Soon</title>
+      <link>/homepage/tbc/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/homepage/tbc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content Coming Soon</title>
       <link>/post/tbc/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
@@ -21,12 +30,21 @@
     </item>
     
     <item>
-      <title></title>
-      <link>/private_page_1.html.enc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Content Coming Soon</title>
+      <link>/resources/tbc/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/private_page_1.html.enc/</guid>
-      <description>Encrypted Report  body { margin: 0 auto; padding: 0 1em; max-width: 28em; font-size: 110%; font-family: &#34;</description>
+      <guid>/resources/tbc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content Coming Soon</title>
+      <link>/tutorials/tbc/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorials/tbc/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -65,25 +83,6 @@ t.j.wise@uu.nl</description>
       <guid>/experience/</guid>
       <description>Experience Employment Student Research Assistant. | Utrecht University.
 | January 2020 to Present</description>
-    </item>
-    
-    <item>
-      <title>Private</title>
-      <link>/private/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/private/</guid>
-      <description> ABC
- function passWord() { var testV = 1; var pass1 = prompt(&#39;Please Enter Your Password&#39;,&#39; &#39;); while (testV     </description>
-    </item>
-    
-    <item>
-      <title>private_page_1</title>
-      <link>/private_page_1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/private_page_1/</guid>
-      <description>Welcome</description>
     </item>
     
   </channel>

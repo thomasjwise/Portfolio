@@ -8,7 +8,27 @@
   </url>
   
   <url>
+    <loc>/homepage/tbc/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/tbc/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resources/tbc/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorials/tbc/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/homepage/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -18,8 +38,13 @@
   </url>
   
   <url>
-    <loc>/private_page_1.html.enc/</loc>
-    <priority>0</priority>
+    <loc>/resources/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorials/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -40,14 +65,6 @@
   
   <url>
     <loc>/experience/</loc>
-  </url>
-  
-  <url>
-    <loc>/private/</loc>
-  </url>
-  
-  <url>
-    <loc>/private_page_1/</loc>
   </url>
   
   <url>
