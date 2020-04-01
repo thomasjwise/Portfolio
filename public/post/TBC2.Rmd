@@ -1,8 +1,0 @@
----
-title: "TBC2"
-author: "Thomas Wise"
-date: "1996-09-01"
-output: md_document
----
-
-ABC
