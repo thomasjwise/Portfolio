@@ -90,7 +90,7 @@ gdp.dat <- read_csv("API_NY.GDP.MKTP.CD_DS2_en_csv_v2_887264.csv",
               skip = 3) # Designate the number of Rows to skip (3)
 ```
 
-Although this can be done with code, another useful method is through manually importing it via rstudio. Simply click on the data you wish to import, click import dataset and this will load a seperate window. This method is especially useful for new, novel or unknown datasets, which may have different parameters to those you have interacted with before. As such you are able to preview how this data will be imported to ensure it is imported correctly. However with these datasets, it is known to skip the first 3 rows, as these are not relevant to the data imported. 
+Although this can be done with code, another useful method is through manually importing it via rstudio. Simply click on the data you wish to import, click import dataset and this will load a separate window. This method is especially useful for new, novel or unknown datasets, which may have different parameters to those you have interacted with before. As such you are able to preview how this data will be imported to ensure it is imported correctly. However with these datasets, it is known to skip the first 3 rows, as these are not relevant to the data imported. 
 
 ## Preparation Part 3: Data Tidying and Selection 
 
@@ -100,7 +100,7 @@ The first step to tidying any data, is to ensure you know what data you actually
 
 #### Data Examination
 
-If we firstly examine the dataframe: *c02.dat*, using the function *names()*, it can be see that there are 65 variables, with data from 1960-2019 being listed. Alongside this, the Country name, Country code, Indicator name and code are also provided. However only through examining the head or tail of the data (which examined the first/last siz items), it can be seen for this dataset information is only provided up until 2014. 
+If we firstly examine the dataframe: *c02.dat*, using the function *names()*, it can be see that there are 65 variables, with data from 1960-2019 being listed. Alongside this, the Country name, Country code, Indicator name and code are also provided. However only through examining the head or tail of the data (which examined the first/last six items), it can be seen for this dataset information is only provided up until 2014. 
 
 ```{r, class.output="scroll-250"}
 names(c02.dat)
@@ -126,7 +126,7 @@ In order to select the specific columns within this dataset, multiple methods co
 
 #### Data Naming 
 
-From this, there is now, three individual datasets which contain only the 2014 data, which can now be merged. However before these can be merged sucessfully these columns should be renamed so it is easier to idenitify the variables. As a whole, variables can either be renamed indivdiually or as a whole, in this instance they will be renamed as a whole.
+From this, there is now, three individual datasets which contain only the 2014 data, which can now be merged. However before these can be merged successfully these columns should be renamed so it is easier to identify the variables. As a whole, variables can either be renamed individually or as a whole, in this instance they will be renamed as a whole.
 
 ```{r}
 # For c02.2014.dat

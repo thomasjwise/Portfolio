@@ -70,7 +70,7 @@ c02.dat &lt;- read_csv(&quot;API_EN.ATM.CO2E.KT_DS2_en_csv_v2_887574.csv&quot;,
 
 gdp.dat &lt;- read_csv(&quot;API_NY.GDP.MKTP.CD_DS2_en_csv_v2_887264.csv&quot;, 
               skip = 3) # Designate the number of Rows to skip (3)</code></pre>
-<p>Although this can be done with code, another useful method is through manually importing it via rstudio. Simply click on the data you wish to import, click import dataset and this will load a seperate window. This method is especially useful for new, novel or unknown datasets, which may have different parameters to those you have interacted with before. As such you are able to preview how this data will be imported to ensure it is imported correctly. However with these datasets, it is known to skip the first 3 rows, as these are not relevant to the data imported.</p>
+<p>Although this can be done with code, another useful method is through manually importing it via rstudio. Simply click on the data you wish to import, click import dataset and this will load a separate window. This method is especially useful for new, novel or unknown datasets, which may have different parameters to those you have interacted with before. As such you are able to preview how this data will be imported to ensure it is imported correctly. However with these datasets, it is known to skip the first 3 rows, as these are not relevant to the data imported.</p>
 </div>
 <div id="preparation-part-3-data-tidying-and-selection" class="section level2">
 <h2>Preparation Part 3: Data Tidying and Selection</h2>
@@ -78,7 +78,7 @@ gdp.dat &lt;- read_csv(&quot;API_NY.GDP.MKTP.CD_DS2_en_csv_v2_887264.csv&quot;,
 <p>The first step to tidying any data, is to ensure you know what data you actually have. This within R is simply conducted through the function <em>names()</em> this simply lists the names of the variables within the presented dataset. This combined with the <em>head()</em>, <em>tail()</em> or <em>glimpse()</em> function, allows an examination of the data to determine what you want to use.</p>
 <div id="data-examination" class="section level4">
 <h4>Data Examination</h4>
-<p>If we firstly examine the dataframe: <em>c02.dat</em>, using the function <em>names()</em>, it can be see that there are 65 variables, with data from 1960-2019 being listed. Alongside this, the Country name, Country code, Indicator name and code are also provided. However only through examining the head or tail of the data (which examined the first/last siz items), it can be seen for this dataset information is only provided up until 2014.</p>
+<p>If we firstly examine the dataframe: <em>c02.dat</em>, using the function <em>names()</em>, it can be see that there are 65 variables, with data from 1960-2019 being listed. Alongside this, the Country name, Country code, Indicator name and code are also provided. However only through examining the head or tail of the data (which examined the first/last six items), it can be seen for this dataset information is only provided up until 2014.</p>
 <pre class="r"><code>names(c02.dat)</code></pre>
 <pre class="scroll-250"><code>##  [1] &quot;Country Name&quot;   &quot;Country Code&quot;   &quot;Indicator Name&quot; &quot;Indicator Code&quot;
 ##  [5] &quot;1960&quot;           &quot;1961&quot;           &quot;1962&quot;           &quot;1963&quot;          
@@ -135,7 +135,7 @@ gdp.dat &lt;- read_csv(&quot;API_NY.GDP.MKTP.CD_DS2_en_csv_v2_887264.csv&quot;,
 </div>
 <div id="data-naming" class="section level4">
 <h4>Data Naming</h4>
-<p>From this, there is now, three individual datasets which contain only the 2014 data, which can now be merged. However before these can be merged sucessfully these columns should be renamed so it is easier to idenitify the variables. As a whole, variables can either be renamed indivdiually or as a whole, in this instance they will be renamed as a whole.</p>
+<p>From this, there is now, three individual datasets which contain only the 2014 data, which can now be merged. However before these can be merged successfully these columns should be renamed so it is easier to identify the variables. As a whole, variables can either be renamed individually or as a whole, in this instance they will be renamed as a whole.</p>
 <pre class="r"><code># For c02.2014.dat
   colnames(c02.2014.dat) &lt;- c(&quot;Country Name&quot;, &quot;Country Code&quot;, &quot;c02_2014&quot;)
 # For pop.2014.dat
