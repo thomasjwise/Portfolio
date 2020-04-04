@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.61.0" />
+
+  <title>Tutorial Introduction &middot; Thomas J Wise</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en"/>
+
+  
+
+  
+  <meta property="og:type" content="blog"/>
+  <meta property="og:site_name" content="Thomas J Wise"/><meta property="og:title" content="Tutorial Introduction"/>
+  <meta property="og:url" content="/tutorials/tutorial_intro.knit/"/>
+  <meta property="og:description" content="Introduction, Motives and Goals It goes without saying that learning to code, analyse data and interact with it productively, is no easy adventure."/>
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Thomas J Wise",
+    "url" : "/",
+    "description": ""
+  }
+  </script>
+
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #000000;
+  }
+
+  .read-more-link a {
+    border-color: #000000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #000000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+      
+
+      <h1>Thomas J Wise</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/education/"> Education </a>
+        </li><li>
+          <a href="/experience/"> Experience </a>
+        </li><li>
+          <a href="/contact/"> Contact </a>
+        </li><li>
+          <a href="/post/"> Posts </a>
+        </li><li>
+          <a href="/resources/"> Resources </a>
+        </li><li>
+          <a href="/tutorials/"> Tutorials </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/thomas-wise-970a0a109/" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/thomasjwise" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/TpsychWise" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Tutorial Introduction</h1>
+
+  <div class="post-date">
+    <time datetime="2020-04-03T00:00:00Z">Apr 3, 2020</time> · 3 min read
+  </div>
+
+  <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="introduction-motives-and-goals">Introduction, Motives and Goals</h1>
+<p>It goes without saying that learning to code, analyse data and interact with it productively, is no easy adventure. But from my experiences, is one which is totally worthwhile. Not only can you create interactive graphics and analysis complex data, it can often allow you to be specific in exactly what you want and need from your data.</p>
+<p>Therefore, as someone who approached this from later within my undergraduate degree (Psychology), I wanted to make materials which:</p>
+<ul>
+<li>Are accessible to those with limited experience,</li>
+<li>Are transferable to other situations,</li>
+<li>Are easy for me to find so I can use them in future situations,</li>
+</ul>
+<p>Although these will not be interactive, and focus only on coding within R, Rmarkdown and associated software, I would encourage anyone to copy and paste the code into their own work spaces and try them out for themselves. Furthermore, through editing, changing and interacting with the variables, datasets and more, it allows you to understanding how things change to what stimulus.</p>
+<p>It is assumed that if you are looking at these tutorials you may have <em>some</em> understanding of the terminology, syntax and such used, however I will aim to comment on the tutorials aimed complexity within each introduction. As such, if you would like an introduction to R at a foundation level, check out the following material from <a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf">CRAN</a>, as well as other core resources they provide.</p>
+<h1 id="core-data">Core Data</h1>
+<p>Throughout these tutorials, I will primarily be using a combined dataset I used during my first year on Utrecht Universities <a href="https://www.uu.nl/masters/en/methodology-and-statistics-behavioural-biomedical-and-social-sciences">Methodology and Statistics for the Behavioural, Biomedical and Social Sciences</a> master's programme, for a visualization assignment within R.</p>
+<p>For this assignment, I amalgamated several different datasets from the <a href="https://data.worldbank.org/">World Bank Open Data</a>, this site is aimed to make the data collected at the world bank accessible and usage by different resources for free, or with minimal charge. I personally love this collection of data, as it is extremely expensive and is often available in a consistent style/layout, between categories, which makes analysis and interpretation much easier. This being said, it still requires the the tidying of data to ensure it can be used effectively. Using the following notes this will allow user to get started with the following tutorials.</p>
+<h1 id="tutorial-data-set-up">Tutorial Data Set up</h1>
+<h3 id="preparation-part-0-packages">Preparation Part 0: Packages</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:5;-o-tab-size:5;tab-size:5"><code class="language-r" data-lang="r"><span style="color:#75715e"># Load Packages </span>
+    <span style="color:#a6e22e">library</span>(tidyverse)
+    <span style="color:#a6e22e">library</span>(rmarkdown)
+    <span style="color:#a6e22e">library</span>(readr)
+</code></pre></div><h2 id="preparation-part-1-data-loading">Preparation Part 1: Data Loading</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:5;-o-tab-size:5;tab-size:5"><code class="language-r" data-lang="r"><span style="color:#75715e">###### Population</span>
+
+<span style="color:#75715e"># Create Temporary location for datasets </span>
+  <span style="color:#75715e">#  temp.pop &lt;- tempfile()</span>
+
+<span style="color:#75715e"># Download Data </span>
+  <span style="color:#75715e">#  download.file(url=&#34;http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv&#34;,</span>
+  <span style="color:#75715e">#                destfile = temp.pop, # location of the file </span>
+  <span style="color:#75715e">#                mode=&#34;wb&#34;) # Mode &#34;wb&#34; indicates this is a .zip</span>
+<span style="color:#75715e"># This downloads a ZIP file. Containing the documents we need.</span>
+  <span style="color:#75715e">#  unzip(temp.pop)</span>
+
+<span style="color:#75715e">###### C02</span>
+    
+<span style="color:#75715e"># Create Temporary location for datasets </span>
+  <span style="color:#75715e">#  temp.co2 &lt;- tempfile()</span>
+
+<span style="color:#75715e"># Download Data </span>
+  <span style="color:#75715e">#  download.file(url=&#34;http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.KT?downloadformat=csv&#34;,</span>
+  <span style="color:#75715e">#                destfile = temp.co2, # location of the file </span>
+  <span style="color:#75715e">#                mode=&#34;wb&#34;) # Mode &#34;wb&#34; indicates this is a .zip</span>
+<span style="color:#75715e"># This downloads a ZIP file. Containing the documents we need.</span>
+  <span style="color:#75715e">#  unzip(temp.co2)</span>
+
+<span style="color:#75715e">###### GDP</span>
+    
+<span style="color:#75715e"># Create Temporary location for datasets </span>
+  <span style="color:#75715e">#  temp.gdp &lt;- tempfile()</span>
+
+<span style="color:#75715e"># Download Data </span>
+  <span style="color:#75715e">#  download.file(url=&#34;http://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv&#34;,</span>
+  <span style="color:#75715e">#                destfile = temp.gdp, # location of the file </span>
+  <span style="color:#75715e">#                mode=&#34;wb&#34;) # Mode &#34;wb&#34; indicates this is a .zip</span>
+<span style="color:#75715e"># This downloads a ZIP file. Containing the documents we need.</span>
+  <span style="color:#75715e">#  unzip(temp.gdp)</span>
+</code></pre></div><h2 id="preparation-part-2-csv-to-dataframes">Preparation Part 2: CSV to Dataframes</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:5;-o-tab-size:5;tab-size:5"><code class="language-r" data-lang="r"><span style="color:#75715e"># Load .csv file to dataframe </span>
+pop.dat <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">API_SP.POP.TOTL_DS2_en_csv_v2_887275.csv&#34;</span>, 
+                    skip <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#75715e"># Designate the number of Rows to skip (3)</span>
+</code></pre></div><pre><code>## Warning: Missing column names filled in: 'X65' [65]
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:5;-o-tab-size:5;tab-size:5"><code class="language-r" data-lang="r">c02.dat <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">API_EN.ATM.CO2E.KT_DS2_en_csv_v2_887574.csv&#34;</span>,
+                    skip <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#75715e"># Designate the number of Rows to skip (3)</span>
+</code></pre></div><pre><code>## Warning: Missing column names filled in: 'X65' [65]
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:5;-o-tab-size:5;tab-size:5"><code class="language-r" data-lang="r">gdp.dat <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">API_NY.GDP.MKTP.CD_DS2_en_csv_v2_887264.csv&#34;</span>, 
+                    skip <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#75715e"># Designate the number of Rows to skip (3)</span>
+</code></pre></div><pre><code>## Warning: Missing column names filled in: 'X65' [65]
+</code></pre><h2 id="preparation-part-3">Preparation Part 3:</h2>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy; Thomas Wise 2020 · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

@@ -3,7 +3,7 @@
   {{ range .Site.RegularPages -}}
     {{ if and (or (eq .Type "post") (eq .Type "article")) (or (not (isset .Params "Hidden")) (eq .Params.Hidden false)) -}}
     <article class="post">
-      <h1 class="post-title">
+      <h1 class="posts-title">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
       </h1>
 

@@ -1,0 +1,162 @@
+---
+title: "Tutorial Introduction"
+author: "Thomas Wise"
+date: "2020-04-03"
+bibliography: tut_bibo.bib
+output: html_document
+---
+
+```{r, echo = FALSE}
+  library(rmarkdown)
+  library(stationery)
+```
+
+```{css, echo = FALSE}
+.scroll-250 {
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: inherit;
+}
+pre code {
+  background-color: #fffde0;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+  color: #0
+}
+```
+
+# Introduction, Motives and Goals 
+
+It goes without saying that learning to code, analyse data and interact with it productively, is no easy adventure. But from my experiences, is one which is totally worthwhile. Not only can you create interactive graphics and analysis complex data, it can often allow you to be specific in exactly what you want and need from your data. 
+
+Therefore, as someone who approached this from later within my undergraduate degree (Psychology), I wanted to make materials which:
+
+  * Are accessible to those with limited experience, 
+  * Are transferable to other situations,
+  * Are easy for me to find so I can use them in future situations,
+  
+Although these will not be interactive, and focus only on coding within R, Rmarkdown and associated software, I would encourage anyone to copy and paste the code into their own work spaces and try them out for themselves. Furthermore, through editing, changing and interacting with the variables, datasets and more, it allows you to understanding how things change to what stimulus. 
+
+It is assumed that if you are looking at these tutorials you may have *some* understanding of the terminology, syntax and such used, however I will aim to comment on the tutorials aimed complexity within each introduction. As such, if you would like an introduction to R at a foundation level, check out the following material from [CRAN](<https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf>), as well as other core resources they provide.
+
+# Core Data
+
+Throughout these tutorials, I will primarily be using a combined dataset I used during my first year on Utrecht Universities [Methodology and Statistics for the Behavioural, Biomedical and Social Sciences](<https://www.uu.nl/masters/en/methodology-and-statistics-behavioural-biomedical-and-social-sciences>) master's programme, for a visualization assignment within R. 
+
+For this assignment, I amalgamated several different datasets from the [World Bank Open Data](<https://data.worldbank.org/>), this site is aimed to make the data collected at the world bank accessible and usage by different resources for free, or with minimal charge. I personally love this collection of data, as it is extremely expensive and is often available in a consistent style/layout, between categories, which makes analysis and interpretation much easier. This being said, it still requires the the tidying of data to ensure it can be used effectively. Using the following notes this will allow user to get started with the following tutorials. 
+
+# Tutorial Data Set up
+
+### Preparation Part 0: Packages  
+
+For all these tutorials, the core packages I will be using will always be listed under *Part 0*, alongside any data I will be using. Through the clear placement of these packages, I personally know exactly what will be needed for my code, plus good organisation helps you (as the programmer) and others (the viewer) understand how you have coded your work. For a majority of my tutorials, you will see the same three to six packages being used. This is because they are good, all round packages which cover 99% of non-specialist needs. These include the Tidyverse [@tidyverseCRAN] and rmarkdown [@rmarkdownbook] as well as many others. 
+
+*Note:* When using any package for the first time, it is advised to call *install.packages("[PACKAGE-NAME]")* to ensure the package is fully installed, before using *library* to call that package into your workspace. 
+
+```{r, package loading, error = FALSE, message = FALSE}
+# Load Packages 
+    library(tidyverse) 
+    library(rmarkdown)
+    library(readr)
+
+```
+
+## Preparation Part 1: Data Loading
+
+Once these packages are called, it is now possible to load in the data. For this, it will be demonstrated step by step how to import and unpack online data stored in zip file. This can be skipped for those using locally stored data. 
+
+For the purpose of this tutorial, three datasets will be downloaded, unzipped and merged to form the dataset which will be analysed. 
+
+[REINSERT CODE]
+
+Once downloaded and unzipped, these will now be stored within your working directory and can be accessed as required.
+
+## Preparation Part 2: CSV to Dataframes
+
+Before any work can be done to these files, these need to be imported from the working directory, into the workspace. Depending on the file which will be used, depends on the function used. However since these are .csv files the function *read_csv()* files will be used. 
+
+*Note:* when importing, loading or assigning data, it is always important to use relevant and useful data names to ensure you and those accessing your code can following the logic and chains of your code correctly. In this example, I use the names *pop.dat*, indicating population data and so forth. 
+
+```{r, csv to dataframes, results = FALSE, error = FALSE, message = FALSE, warning = FALSE}
+# Load .csv file to dataframe, using read_csv 
+pop.dat <- read_csv("API_SP.POP.TOTL_DS2_en_csv_v2_887275.csv", 
+              skip = 3) # Designate the number of Rows to skip (3)
+
+c02.dat <- read_csv("API_EN.ATM.CO2E.KT_DS2_en_csv_v2_887574.csv",
+              skip = 3) # Designate the number of Rows to skip (3)
+
+gdp.dat <- read_csv("API_NY.GDP.MKTP.CD_DS2_en_csv_v2_887264.csv", 
+              skip = 3) # Designate the number of Rows to skip (3)
+```
+
+Although this can be done with code, another useful method is through manually importing it via rstudio. Simply click on the data you wish to import, click import dataset and this will load a seperate window. This method is especially useful for new, novel or unknown datasets, which may have different parameters to those you have interacted with before. As such you are able to preview how this data will be imported to ensure it is imported correctly. However with these datasets, it is known to skip the first 3 rows, as these are not relevant to the data imported. 
+
+## Preparation Part 3: Data Tidying and Selection 
+
+It is said, that the majority data scientist, analysis time with data is spent tidying and *cleaning* their data, so that it is usable within the analyses they wish to conduct. As such, this part will briefly cover the tidying that I have done to this dataset to ensure it is usable within future tutorials. Any deviations, or differences in the data used will of course be noted where relevant. 
+
+The first step to tidying any data, is to ensure you know what data you actually have. This within R is simply conducted through the function *names()* this simply lists the names of the variables within the presented dataset. This combined with the *head()*, *tail()* or *glimpse()* function, allows an examination of the data to determine what you want to use. 
+
+#### Data Examination
+
+If we firstly examine the dataframe: *c02.dat*, using the function *names()*, it can be see that there are 65 variables, with data from 1960-2019 being listed. Alongside this, the Country name, Country code, Indicator name and code are also provided. However only through examining the head or tail of the data (which examined the first/last siz items), it can be seen for this dataset information is only provided up until 2014. 
+
+```{r, class.output="scroll-250"}
+names(c02.dat)
+head(c02.dat)
+```
+
+Although not included in this tutorial, similar variable layouts are present for both *gdp.dat* and *pop.dat*, although each dataset contains different information. As such, data should be excluded accordingly. 
+
+#### Data Selection
+
+For the purpose of these future tutorials, one year will be selected from this dataset, although this may be different for others, in this instance only one will be selected. As the most recent, the data from 2014 will be used. As such across each of the three datasets 2014 will be isolated accordingly. 
+
+In order to select the specific columns within this dataset, multiple methods could be used. One of the easiest selection methods is that of using the template: *new.dat <- my.data[rows,cols]*, where locations (rows/columns) can be specified through "names" or numbers. 
+
+```{r}
+# For c02.dat 
+    c02.2014.dat <- c02.dat[, c("Country Name", "Country Code", "2014")]
+# For pop.dat
+    pop.2014.dat <- pop.dat[, c("Country Name", "Country Code", "2014")]
+# For gdp.dat
+    gdp.2014.dat <-gdp.dat[, c("Country Name", "Country Code", "2014")]
+```
+
+#### Data Naming 
+
+From this, there is now, three individual datasets which contain only the 2014 data, which can now be merged. However before these can be merged sucessfully these columns should be renamed so it is easier to idenitify the variables. As a whole, variables can either be renamed indivdiually or as a whole, in this instance they will be renamed as a whole.
+
+```{r}
+# For c02.2014.dat
+  colnames(c02.2014.dat) <- c("Country Name", "Country Code", "c02_2014")
+# For pop.2014.dat
+  colnames(pop.2014.dat) <- c("Country Name", "Country Code", "pop_2014")
+# For gdp.2014.dat
+  colnames(gdp.2014.dat) <- c("Country Name", "Country Code", "gdp_2014")
+```
+
+#### Data Merging 
+
+Now that all these individual datasets have been labelled accordingly, they can be successfully merged. Once again, although there are multiple methods for this, only the most straightforward will be used. One of the most simple methods is the *merge()* function, this however is limited as it only allows the merging of two datasets at any one time. Therefore to merge these three datasets this function must be completed twice. 
+
+```{r}
+dat.2014 <- merge(c02.2014.dat, pop.2014.dat, by=c("Country Name", "Country Code"))
+dat.2014 <- merge(dat.2014, gdp.2014.dat, by=c("Country Name", "Country Code"))
+```
+
+#### Data Reviewing
+
+Now that all the data has been merged, it can once again be reviewed, to ensure the data is correctly aligned. 
+```{r}
+# Calling the function Head()
+head(dat.2014)
+```
+
+# Conclusions and Review
+
+During this tutorial introduction, the foundations of these tutorials has been covered, and the datasets which will be used has been outlined, set up and explained. During the coming tutorials, this data will be examined, explored and manipulated further. 
+
+#### References
+<font size = 2>

@@ -1,0 +1,182 @@
+---
+title: "Tutorial Introduction"
+author: "Thomas Wise"
+date: "2020-04-03"
+bibliography: tut_bibo.bib
+output: html_document
+---
+
+
+
+<style type="text/css">
+.scroll-250 {
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: inherit;
+}
+pre code {
+  background-color: #fffde0;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+  color: #0
+}
+</style>
+<div id="introduction-motives-and-goals" class="section level1">
+<h1>Introduction, Motives and Goals</h1>
+<p>It goes without saying that learning to code, analyse data and interact with it productively, is no easy adventure. But from my experiences, is one which is totally worthwhile. Not only can you create interactive graphics and analysis complex data, it can often allow you to be specific in exactly what you want and need from your data.</p>
+<p>Therefore, as someone who approached this from later within my undergraduate degree (Psychology), I wanted to make materials which:</p>
+<ul>
+<li>Are accessible to those with limited experience,</li>
+<li>Are transferable to other situations,</li>
+<li>Are easy for me to find so I can use them in future situations,</li>
+</ul>
+<p>Although these will not be interactive, and focus only on coding within R, Rmarkdown and associated software, I would encourage anyone to copy and paste the code into their own work spaces and try them out for themselves. Furthermore, through editing, changing and interacting with the variables, datasets and more, it allows you to understanding how things change to what stimulus.</p>
+<p>It is assumed that if you are looking at these tutorials you may have <em>some</em> understanding of the terminology, syntax and such used, however I will aim to comment on the tutorials aimed complexity within each introduction. As such, if you would like an introduction to R at a foundation level, check out the following material from <a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf">CRAN</a>, as well as other core resources they provide.</p>
+</div>
+<div id="core-data" class="section level1">
+<h1>Core Data</h1>
+<p>Throughout these tutorials, I will primarily be using a combined dataset I used during my first year on Utrecht Universities <a href="https://www.uu.nl/masters/en/methodology-and-statistics-behavioural-biomedical-and-social-sciences">Methodology and Statistics for the Behavioural, Biomedical and Social Sciences</a> master’s programme, for a visualization assignment within R.</p>
+<p>For this assignment, I amalgamated several different datasets from the <a href="https://data.worldbank.org/">World Bank Open Data</a>, this site is aimed to make the data collected at the world bank accessible and usage by different resources for free, or with minimal charge. I personally love this collection of data, as it is extremely expensive and is often available in a consistent style/layout, between categories, which makes analysis and interpretation much easier. This being said, it still requires the the tidying of data to ensure it can be used effectively. Using the following notes this will allow user to get started with the following tutorials.</p>
+</div>
+<div id="tutorial-data-set-up" class="section level1">
+<h1>Tutorial Data Set up</h1>
+<div id="preparation-part-0-packages" class="section level3">
+<h3>Preparation Part 0: Packages</h3>
+<p>For all these tutorials, the core packages I will be using will always be listed under <em>Part 0</em>, alongside any data I will be using. Through the clear placement of these packages, I personally know exactly what will be needed for my code, plus good organisation helps you (as the programmer) and others (the viewer) understand how you have coded your work. For a majority of my tutorials, you will see the same three to six packages being used. This is because they are good, all round packages which cover 99% of non-specialist needs. These include the Tidyverse <span class="citation">(Wickham et al. 2019)</span> and rmarkdown <span class="citation">(Xie, Allaire, and Grolemund 2018)</span> as well as many others.</p>
+<p><em>Note:</em> When using any package for the first time, it is advised to call <em>install.packages(“[PACKAGE-NAME]”)</em> to ensure the package is fully installed, before using <em>library</em> to call that package into your workspace.</p>
+<pre class="r"><code># Load Packages 
+    library(tidyverse) 
+    library(rmarkdown)
+    library(readr)</code></pre>
+</div>
+<div id="preparation-part-1-data-loading" class="section level2">
+<h2>Preparation Part 1: Data Loading</h2>
+<p>Once these packages are called, it is now possible to load in the data. For this, it will be demonstrated step by step how to import and unpack online data stored in zip file. This can be skipped for those using locally stored data.</p>
+<p>For the purpose of this tutorial, three datasets will be downloaded, unzipped and merged to form the dataset which will be analysed.</p>
+<p>[REINSERT CODE]</p>
+<p>Once downloaded and unzipped, these will now be stored within your working directory and can be accessed as required.</p>
+</div>
+<div id="preparation-part-2-csv-to-dataframes" class="section level2">
+<h2>Preparation Part 2: CSV to Dataframes</h2>
+<p>Before any work can be done to these files, these need to be imported from the working directory, into the workspace. Depending on the file which will be used, depends on the function used. However since these are .csv files the function <em>read_csv()</em> files will be used.</p>
+<p><em>Note:</em> when importing, loading or assigning data, it is always important to use relevant and useful data names to ensure you and those accessing your code can following the logic and chains of your code correctly. In this example, I use the names <em>pop.dat</em>, indicating population data and so forth.</p>
+<pre class="r"><code># Load .csv file to dataframe, using read_csv 
+pop.dat &lt;- read_csv(&quot;API_SP.POP.TOTL_DS2_en_csv_v2_887275.csv&quot;, 
+              skip = 3) # Designate the number of Rows to skip (3)
+
+c02.dat &lt;- read_csv(&quot;API_EN.ATM.CO2E.KT_DS2_en_csv_v2_887574.csv&quot;,
+              skip = 3) # Designate the number of Rows to skip (3)
+
+gdp.dat &lt;- read_csv(&quot;API_NY.GDP.MKTP.CD_DS2_en_csv_v2_887264.csv&quot;, 
+              skip = 3) # Designate the number of Rows to skip (3)</code></pre>
+<p>Although this can be done with code, another useful method is through manually importing it via rstudio. Simply click on the data you wish to import, click import dataset and this will load a seperate window. This method is especially useful for new, novel or unknown datasets, which may have different parameters to those you have interacted with before. As such you are able to preview how this data will be imported to ensure it is imported correctly. However with these datasets, it is known to skip the first 3 rows, as these are not relevant to the data imported.</p>
+</div>
+<div id="preparation-part-3-data-tidying-and-selection" class="section level2">
+<h2>Preparation Part 3: Data Tidying and Selection</h2>
+<p>It is said, that the majority data scientist, analysis time with data is spent tidying and <em>cleaning</em> their data, so that it is usable within the analyses they wish to conduct. As such, this part will briefly cover the tidying that I have done to this dataset to ensure it is usable within future tutorials. Any deviations, or differences in the data used will of course be noted where relevant.</p>
+<p>The first step to tidying any data, is to ensure you know what data you actually have. This within R is simply conducted through the function <em>names()</em> this simply lists the names of the variables within the presented dataset. This combined with the <em>head()</em>, <em>tail()</em> or <em>glimpse()</em> function, allows an examination of the data to determine what you want to use.</p>
+<div id="data-examination" class="section level4">
+<h4>Data Examination</h4>
+<p>If we firstly examine the dataframe: <em>c02.dat</em>, using the function <em>names()</em>, it can be see that there are 65 variables, with data from 1960-2019 being listed. Alongside this, the Country name, Country code, Indicator name and code are also provided. However only through examining the head or tail of the data (which examined the first/last siz items), it can be seen for this dataset information is only provided up until 2014.</p>
+<pre class="r"><code>names(c02.dat)</code></pre>
+<pre class="scroll-250"><code>##  [1] &quot;Country Name&quot;   &quot;Country Code&quot;   &quot;Indicator Name&quot; &quot;Indicator Code&quot;
+##  [5] &quot;1960&quot;           &quot;1961&quot;           &quot;1962&quot;           &quot;1963&quot;          
+##  [9] &quot;1964&quot;           &quot;1965&quot;           &quot;1966&quot;           &quot;1967&quot;          
+## [13] &quot;1968&quot;           &quot;1969&quot;           &quot;1970&quot;           &quot;1971&quot;          
+## [17] &quot;1972&quot;           &quot;1973&quot;           &quot;1974&quot;           &quot;1975&quot;          
+## [21] &quot;1976&quot;           &quot;1977&quot;           &quot;1978&quot;           &quot;1979&quot;          
+## [25] &quot;1980&quot;           &quot;1981&quot;           &quot;1982&quot;           &quot;1983&quot;          
+## [29] &quot;1984&quot;           &quot;1985&quot;           &quot;1986&quot;           &quot;1987&quot;          
+## [33] &quot;1988&quot;           &quot;1989&quot;           &quot;1990&quot;           &quot;1991&quot;          
+## [37] &quot;1992&quot;           &quot;1993&quot;           &quot;1994&quot;           &quot;1995&quot;          
+## [41] &quot;1996&quot;           &quot;1997&quot;           &quot;1998&quot;           &quot;1999&quot;          
+## [45] &quot;2000&quot;           &quot;2001&quot;           &quot;2002&quot;           &quot;2003&quot;          
+## [49] &quot;2004&quot;           &quot;2005&quot;           &quot;2006&quot;           &quot;2007&quot;          
+## [53] &quot;2008&quot;           &quot;2009&quot;           &quot;2010&quot;           &quot;2011&quot;          
+## [57] &quot;2012&quot;           &quot;2013&quot;           &quot;2014&quot;           &quot;2015&quot;          
+## [61] &quot;2016&quot;           &quot;2017&quot;           &quot;2018&quot;           &quot;2019&quot;          
+## [65] &quot;X65&quot;</code></pre>
+<pre class="r"><code>head(c02.dat)</code></pre>
+<pre class="scroll-250"><code>## # A tibble: 6 x 65
+##   `Country Name` `Country Code` `Indicator Name` `Indicator Code` `1960` `1961`
+##   &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;            &lt;chr&gt;             &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Aruba          ABW            CO2 emissions (… EN.ATM.CO2E.KT      NA     NA 
+## 2 Afghanistan    AFG            CO2 emissions (… EN.ATM.CO2E.KT     414.   491.
+## 3 Angola         AGO            CO2 emissions (… EN.ATM.CO2E.KT     550.   455.
+## 4 Albania        ALB            CO2 emissions (… EN.ATM.CO2E.KT    2024.  2281.
+## 5 Andorra        AND            CO2 emissions (… EN.ATM.CO2E.KT      NA     NA 
+## 6 Arab World     ARB            CO2 emissions (… EN.ATM.CO2E.KT   59535. 65120.
+## # … with 59 more variables: `1962` &lt;dbl&gt;, `1963` &lt;dbl&gt;, `1964` &lt;dbl&gt;,
+## #   `1965` &lt;dbl&gt;, `1966` &lt;dbl&gt;, `1967` &lt;dbl&gt;, `1968` &lt;dbl&gt;, `1969` &lt;dbl&gt;,
+## #   `1970` &lt;dbl&gt;, `1971` &lt;dbl&gt;, `1972` &lt;dbl&gt;, `1973` &lt;dbl&gt;, `1974` &lt;dbl&gt;,
+## #   `1975` &lt;dbl&gt;, `1976` &lt;dbl&gt;, `1977` &lt;dbl&gt;, `1978` &lt;dbl&gt;, `1979` &lt;dbl&gt;,
+## #   `1980` &lt;dbl&gt;, `1981` &lt;dbl&gt;, `1982` &lt;dbl&gt;, `1983` &lt;dbl&gt;, `1984` &lt;dbl&gt;,
+## #   `1985` &lt;dbl&gt;, `1986` &lt;dbl&gt;, `1987` &lt;dbl&gt;, `1988` &lt;dbl&gt;, `1989` &lt;dbl&gt;,
+## #   `1990` &lt;dbl&gt;, `1991` &lt;dbl&gt;, `1992` &lt;dbl&gt;, `1993` &lt;dbl&gt;, `1994` &lt;dbl&gt;,
+## #   `1995` &lt;dbl&gt;, `1996` &lt;dbl&gt;, `1997` &lt;dbl&gt;, `1998` &lt;dbl&gt;, `1999` &lt;dbl&gt;,
+## #   `2000` &lt;dbl&gt;, `2001` &lt;dbl&gt;, `2002` &lt;dbl&gt;, `2003` &lt;dbl&gt;, `2004` &lt;dbl&gt;,
+## #   `2005` &lt;dbl&gt;, `2006` &lt;dbl&gt;, `2007` &lt;dbl&gt;, `2008` &lt;dbl&gt;, `2009` &lt;dbl&gt;,
+## #   `2010` &lt;dbl&gt;, `2011` &lt;dbl&gt;, `2012` &lt;dbl&gt;, `2013` &lt;dbl&gt;, `2014` &lt;dbl&gt;,
+## #   `2015` &lt;lgl&gt;, `2016` &lt;lgl&gt;, `2017` &lt;lgl&gt;, `2018` &lt;lgl&gt;, `2019` &lt;lgl&gt;,
+## #   X65 &lt;lgl&gt;</code></pre>
+<p>Although not included in this tutorial, similar variable layouts are present for both <em>gdp.dat</em> and <em>pop.dat</em>, although each dataset contains different information. As such, data should be excluded accordingly.</p>
+</div>
+<div id="data-selection" class="section level4">
+<h4>Data Selection</h4>
+<p>For the purpose of these future tutorials, one year will be selected from this dataset, although this may be different for others, in this instance only one will be selected. As the most recent, the data from 2014 will be used. As such across each of the three datasets 2014 will be isolated accordingly.</p>
+<p>In order to select the specific columns within this dataset, multiple methods could be used. One of the easiest selection methods is that of using the template: <em>new.dat &lt;- my.data[rows,cols]</em>, where locations (rows/columns) can be specified through “names” or numbers.</p>
+<pre class="r"><code># For c02.dat 
+    c02.2014.dat &lt;- c02.dat[, c(&quot;Country Name&quot;, &quot;Country Code&quot;, &quot;2014&quot;)]
+# For pop.dat
+    pop.2014.dat &lt;- pop.dat[, c(&quot;Country Name&quot;, &quot;Country Code&quot;, &quot;2014&quot;)]
+# For gdp.dat
+    gdp.2014.dat &lt;-gdp.dat[, c(&quot;Country Name&quot;, &quot;Country Code&quot;, &quot;2014&quot;)]</code></pre>
+</div>
+<div id="data-naming" class="section level4">
+<h4>Data Naming</h4>
+<p>From this, there is now, three individual datasets which contain only the 2014 data, which can now be merged. However before these can be merged sucessfully these columns should be renamed so it is easier to idenitify the variables. As a whole, variables can either be renamed indivdiually or as a whole, in this instance they will be renamed as a whole.</p>
+<pre class="r"><code># For c02.2014.dat
+  colnames(c02.2014.dat) &lt;- c(&quot;Country Name&quot;, &quot;Country Code&quot;, &quot;c02_2014&quot;)
+# For pop.2014.dat
+  colnames(pop.2014.dat) &lt;- c(&quot;Country Name&quot;, &quot;Country Code&quot;, &quot;pop_2014&quot;)
+# For gdp.2014.dat
+  colnames(gdp.2014.dat) &lt;- c(&quot;Country Name&quot;, &quot;Country Code&quot;, &quot;gdp_2014&quot;)</code></pre>
+</div>
+<div id="data-merging" class="section level4">
+<h4>Data Merging</h4>
+<p>Now that all these individual datasets have been labelled accordingly, they can be successfully merged. Once again, although there are multiple methods for this, only the most straightforward will be used. One of the most simple methods is the <em>merge()</em> function, this however is limited as it only allows the merging of two datasets at any one time. Therefore to merge these three datasets this function must be completed twice.</p>
+<pre class="r"><code>dat.2014 &lt;- merge(c02.2014.dat, pop.2014.dat, by=c(&quot;Country Name&quot;, &quot;Country Code&quot;))
+dat.2014 &lt;- merge(dat.2014, gdp.2014.dat, by=c(&quot;Country Name&quot;, &quot;Country Code&quot;))</code></pre>
+</div>
+<div id="data-reviewing" class="section level4">
+<h4>Data Reviewing</h4>
+<p>Now that all the data has been merged, it can once again be reviewed, to ensure the data is correctly aligned.</p>
+<pre class="r"><code># Calling the function Head()
+head(dat.2014)</code></pre>
+<pre><code>##     Country Name Country Code   c02_2014 pop_2014     gdp_2014
+## 1    Afghanistan          AFG   9809.225 33370794  20484873230
+## 2        Albania          ALB   5716.853  2889104  13228244336
+## 3        Algeria          DZA 145400.217 38923687 213808808747
+## 4 American Samoa          ASM         NA    55791    642000000
+## 5        Andorra          AND    462.042    79213   3350736367
+## 6         Angola          AGO  34763.160 26941779 145712200313</code></pre>
+</div>
+</div>
+</div>
+<div id="conclusions-and-review" class="section level1">
+<h1>Conclusions and Review</h1>
+<p>During this tutorial introduction, the foundations of these tutorials has been covered, and the datasets which will be used has been outlined, set up and explained. During the coming tutorials, this data will be examined, explored and manipulated further.</p>
+<div id="references" class="section level4">
+<h4>References</h4>
+<p><font size = 2></p>
+<div id="refs" class="references">
+<div id="ref-tidyverseCRAN">
+<p>Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.</p>
+</div>
+<div id="ref-rmarkdownbook">
+<p>Xie, Yihui, J.J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a>.</p>
+</div>
+</div>
+</div>
+</div>

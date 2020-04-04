@@ -6,10 +6,19 @@
     <description>Recent content in Tutorials on Thomas J Wise</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tutorial Introduction</title>
+      <link>/tutorials/tutorial_intro/</link>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorials/tutorial_intro/</guid>
+      <description>.scroll-250 { max-height: 250px; overflow-y: auto; background-color: inherit; } pre code { background-color: #fffde0; border: 1px solid #999; display: block; padding: 20px; color: #0 }  Introduction, Motives and Goals It goes without saying that learning to code, analyse data and interact with it productively, is no easy adventure.</description>
+    </item>
     
     <item>
       <title>Tutorials Coming Soon</title>
