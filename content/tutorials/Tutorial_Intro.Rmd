@@ -68,7 +68,46 @@ Once these packages are called, it is now possible to load in the data. For this
 
 For the purpose of this tutorial, three datasets will be downloaded, unzipped and merged to form the dataset which will be analysed. 
 
-[REINSERT CODE]
+```{r, data loading, results = FALSE, error = FALSE}
+## Population - from the World Bank
+
+
+# 1) Create Temporary location for datasets, using tempfile()
+# The location (temp.pop) can be changed as required.
+temp.pop <- tempfile()
+
+# 2) Download Data 
+# Using the function, download.file(), which includes you "url" and "destfile"
+download.file(url="http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv",
+              destfile = temp.pop, # location of the temp file 
+              mode="wb") # Mode "wb" indicates this is a .zip
+# This downloads a ZIP file. Containing the documents we need.
+# 3) Unzip this temp file using unzip()
+unzip(temp.pop)
+
+## C02
+# Create Temporary location for datasets 
+temp.co2 <- tempfile()
+
+# Download Data 
+download.file(url="http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.KT?downloadformat=csv",
+              destfile = temp.co2, # location of the file 
+              mode="wb") # Mode "wb" indicates this is a .zip
+# This downloads a ZIP file. Containing the documents we need.
+unzip(temp.co2)
+
+## GDP
+
+# Create Temporary location for datasets 
+temp.gdp <- tempfile()
+
+# Download Data 
+download.file(url="http://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv",
+              destfile = temp.gdp, # location of the file 
+              mode="wb") # Mode "wb" indicates this is a .zip
+# This downloads a ZIP file. Containing the documents we need.
+unzip(temp.gdp)
+```
 
 Once downloaded and unzipped, these will now be stored within your working directory and can be accessed as required.
 
